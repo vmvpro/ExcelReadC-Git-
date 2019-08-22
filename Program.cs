@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ExcelReadC
 {
-    class Program
+    public class Program
     {
         static int counter = 0;
 
@@ -18,11 +18,11 @@ namespace ExcelReadC
         static DataTable dt;
 
         static void Main()
-		{
+        {
             //dynamic app = null;
             //string excelProgId = "Excel.Application";
             //app = Activator.CreateInstance(Type.GetTypeFromProgID(excelProgId));
-            
+
             //app.Visible = true;
 
             //app.Workbooks.Add();
@@ -31,47 +31,47 @@ namespace ExcelReadC
 
             //============================================================================
 
-			//string fileName = "000 - 13012 - 1012103 - Test_1";
+            //string fileName = "000 - 13012 - 1012103 - Test_1";
 
-			//string fileName = "001 - 13006 - 1901076 - Шута м";
+            //string fileName = "001 - 13006 - 1901076 - Шута м";
             //string fileName = "001 - 13006 - 1901076 - Шута м";
 
             //string fileName = "002 - 13006 - 1901076 - Шута д";
 
             //string fileName = "003 - 13011 - 1011105 - Тарасенко д_";
             //string fileName = "004 - 13011 - 1011105 - Тарасенко м";
-            
 
-			//string fileName = "005 - 13114 - 1114095 - Сімак  м";
-			//string fileName = "006 - 13114 - 1114095 - Сімак  д";
 
-			//string fileName = "007 - 13006 - 1006307 - Хомюк  м";
-			//string fileName = "008 - 13006 - 1006307 - Хомюк  д";
+            //string fileName = "005 - 13114 - 1114095 - Сімак  м";
+            //string fileName = "006 - 13114 - 1114095 - Сімак  д";
 
-			//string fileName = "009 - 13004 - 1120665 - Лопатіна м";
-			//string fileName = "010 - 13004 - 1120665 - Лопатіна д";
+            //string fileName = "007 - 13006 - 1006307 - Хомюк  м";
+            //string fileName = "008 - 13006 - 1006307 - Хомюк  д";
 
-			//string fileName = "011 - 13100 - 1100045 - Сіманенко.xls";
-			//string fileName = "012 - 13533 - 1533309 - Фатюк";
+            //string fileName = "009 - 13004 - 1120665 - Лопатіна м";
+            //string fileName = "010 - 13004 - 1120665 - Лопатіна д";
 
-			//string fileName = "013 - 13017 - 1017214 - Веску__.doc";
-			//string fileName = "014 - 13003 - 1003008 - Кравченко  м__";
+            //string fileName = "011 - 13100 - 1100045 - Сіманенко.xls";
+            //string fileName = "012 - 13533 - 1533309 - Фатюк";
 
-			//string fileName = "015 - 1003008 - Кравченко  д__";
+            //string fileName = "013 - 13017 - 1017214 - Веску__.doc";
+            //string fileName = "014 - 13003 - 1003008 - Кравченко  м__";
 
-			//string fileName = "016 - 13023 - 1023006 - Затенко__";
+            //string fileName = "015 - 1003008 - Кравченко  д__";
+
+            //string fileName = "016 - 13023 - 1023006 - Затенко__";
 
             //string fileName = "017 - 13001 - 1001024 - Пересенчук  м_1";
-			//string fileName = "018 - 13001 - 1001024 - Пересенчук  д__";
+            //string fileName = "018 - 13001 - 1001024 - Пересенчук  д__";
 
-			//string fileName = "019 - 13007 - 1007160 - Івасечко  д__";
-			//string fileName = "020 - 13007 - 1007160 - Івасечко  м__";
+            //string fileName = "019 - 13007 - 1007160 - Івасечко  д__";
+            //string fileName = "020 - 13007 - 1007160 - Івасечко  м__";
 
-			//string fileName = "022 - 13149 - 1149117 - Цимбалюк д_";
-			//string fileName = "023 - 13149 - 1149117 - Цимбалюк м";
+            //string fileName = "022 - 13149 - 1149117 - Цимбалюк д_";
+            //string fileName = "023 - 13149 - 1149117 - Цимбалюк м";
 
-			//string fileName = "024 - 13019 - 1019138 - Вісленко  м";
-			//string fileName = "025 - 13019 - 1019138 - Вісленко  д";
+            //string fileName = "024 - 13019 - 1019138 - Вісленко  м";
+            //string fileName = "025 - 13019 - 1019138 - Вісленко  д";
 
             //string fileName = "026 - 13021 - 1021078 - Матвєєва";
             //string fileName = "027 - 13015 - 1015004 - Губанова  д";    
@@ -117,7 +117,7 @@ namespace ExcelReadC
 
 
             Main2(path.Trim(), fileName.Trim() + ".xlsx");
-		}
+        }
 
         static public bool Flag(object[] arrayColumn)
         {
@@ -152,7 +152,7 @@ namespace ExcelReadC
             }
         }
 
-        static public int ConvertEI(string ei)
+        public static int ConvertEI(string ei)
         {
             switch (ei)
             {
@@ -173,7 +173,7 @@ namespace ExcelReadC
             return 796;
         }
 
-        static public decimal FuncPrice(string price_)
+        public static decimal FuncPrice(string price_)
         {
             decimal price = 0;
             try
@@ -188,7 +188,7 @@ namespace ExcelReadC
             return price;
         }
 
-        static public decimal FuncSum(string sum_)
+        public static decimal FuncSum(string sum_)
         {
             decimal sum = 0;
             try
@@ -203,7 +203,7 @@ namespace ExcelReadC
             return sum;
         }
 
-        static public decimal FuncCount(string count_)
+        public static decimal FuncCount(string count_)
         {
             decimal count = 0;
             try
@@ -218,7 +218,7 @@ namespace ExcelReadC
             return count;
         }
 
-        static string ConvertKmat(string kmat_old, string ceh, List<string> DoubleKmat)
+        public static string ConvertKmat(string kmat_old, string ceh, List<string> DoubleKmat)
         {
             string kmat = "";
             string ceh_convert = "";
@@ -237,7 +237,7 @@ namespace ExcelReadC
             }
 
             if (!DoubleKmat.Contains(kmat_old) || kmat_old == "")
-            { 
+            {
 
             }
 
@@ -250,19 +250,13 @@ namespace ExcelReadC
 
             int len = ceh.Count();
 
-            if (kmat_old == "" | DoubleKmat.Contains(kmat_old))
+            if (kmat_old == "" || DoubleKmat.Contains(kmat_old))
             {
-                //counter++;
                 string str_counter = counter.ToString();
                 int len_counter = str_counter.Length;
                 int len_ceh = ceh.Length;
-                int symbols = 11 - len_ceh - len_counter;
-                len_counter = 0;
-                //if (str_counter.Length == 1) len_counter = 
 
-                //kmat = "917" + "vmv" + ceh + new String('0', 15 - 2 - str_counter.Length -  len_ceh - symbols) + str_counter;
-                kmat = "917" + "vmv" + ceh + new String('0', 4 - str_counter.Length) + str_counter;
-                
+                kmat = "920" + "vmv" + ceh + new String('0', 4 - str_counter.Length) + str_counter;
 
                 return kmat;
             }
@@ -270,34 +264,157 @@ namespace ExcelReadC
             int len_kmat_old = old_kmat_str.Count();
             if (len_kmat_old >= 12 && !DoubleKmat.Contains(kmat_old))
             {
-                kmat = "917" + old_kmat_str.Substring(len_kmat_old - 12, 12);
+                kmat = "920" + old_kmat_str.Substring(len_kmat_old - 12, 12);
             }
             else if (old_kmat_str.Count() == 11)
             {
-                kmat = "917" + "0" + old_kmat_str;
+                kmat = "920" + "0" + old_kmat_str;
             }
-            else if (old_kmat_str.Count() == 10 )
+            else if (old_kmat_str.Count() == 10)
             {
-                kmat = "917" + "00" + old_kmat_str;
+                kmat = "920" + "00" + old_kmat_str;
             }
             else if (old_kmat_str.Count() == 9)
             {
-                kmat = "917" + ceh.Substring(len - 3, 3) + old_kmat_str;
+                kmat = "920" + ceh.Substring(len - 3, 3) + old_kmat_str;
             }
             else if (old_kmat_str.Count() == 8)
             {
-                kmat = "917" + ceh_convert + old_kmat_str;
+                kmat = "920" + ceh_convert + old_kmat_str;
             }
             else
             {
                 count_kmat_old = 12 - ceh_convert.ToString().Count() - old_kmat_str.Count();
-                kmat = "917" + ceh_convert.ToString() + new String('0', count_kmat_old) + old_kmat_str;   // 3 + 4 + 1 + 7
+                kmat = "920" + ceh_convert.ToString() + new String('0', count_kmat_old) + old_kmat_str;   // 3 + 4 + 1 + 7
             }
 
             return kmat;
         }
 
-        static Dictionary<string, string> KSM = new Dictionary<string, string>();
+        public static string ConvertKmatTest(string kmat_old, string ceh, List<string> DoubleKmat)
+        {
+            string kmat = "";
+            string ceh_convert = "";
+            int count_kmat_old = 0;
+
+            string old_kmat_str = "";
+            try
+            {
+                string old_kmat_convert = kmat_old.Replace(" ", "").Replace(",", "").Replace("-", "").Replace(".", "").Replace("+", "");    //00123456
+                old_kmat_str = Convert.ToInt32(old_kmat_convert).ToString();   // 8
+            }
+            catch (Exception)
+            {
+                string old_kmat_convert = kmat_old.Replace(" ", "").Replace(",", "").Replace("-", "").Replace(".", "").Replace("+", "");    //00123456
+                old_kmat_str = old_kmat_convert;
+            }
+
+            if (!DoubleKmat.Contains(kmat_old) || kmat_old == "")
+            {
+
+            }
+
+            if (ceh.Count() < 6 && old_kmat_str.Count() <= 7)
+                ceh_convert = ceh;
+            else if (ceh.Count() > 4)
+                ceh_convert = ceh.ToString().Substring(0, 1) + ceh.ToString().Substring(2, 3);
+            else
+                ceh_convert = ceh;
+
+            int len = ceh.Count();
+
+            //--------------------------------------------------------
+
+            if (kmat_old == "" || DoubleKmat.Contains(kmat_old))
+            {
+                return CreateNewKmat(ceh, counter);
+            }
+
+            int len_kmat_old = old_kmat_str.Count();
+            if (len_kmat_old >= 12 && !DoubleKmat.Contains(kmat_old))
+            {
+                kmat = "920" + old_kmat_str.Substring(len_kmat_old - 12, 12);
+            }
+            else if (old_kmat_str.Count() == 11)
+            {
+                kmat = "920" + "0" + old_kmat_str;
+            }
+            else if (old_kmat_str.Count() == 10)
+            {
+                kmat = "920" + "00" + old_kmat_str;
+            }
+            else if (old_kmat_str.Count() == 9)
+            {
+                kmat = "920" + ceh.Substring(len - 3, 3) + old_kmat_str;
+            }
+            else if (old_kmat_str.Count() == 8)
+            {
+                kmat = "920" + ceh_convert + old_kmat_str;
+            }
+            else
+            {
+                count_kmat_old = 12 - ceh_convert.ToString().Count() - old_kmat_str.Count();
+                kmat = "920" + ceh_convert.ToString() + new String('0', count_kmat_old) + old_kmat_str;   // 3 + 4 + 1 + 7
+            }
+
+            return kmat;
+        }
+
+        private static string CreateNewKmat(string ceh, int counter)
+        {
+            string str_counter = counter.ToString();
+            int len_counter = str_counter.Length;
+            int len_ceh = ceh.Length;
+
+            string kmat = "920" + "vmv" + ceh + new String('0', 4 - str_counter.Length) + str_counter;
+
+            return kmat;
+
+
+        }
+
+        public static Dictionary<string, string> KSM = new Dictionary<string, string>();
+
+		static void  GroupByListRecource()
+		{
+			string old_kmat1 = "00123";
+			string old_kmat2 = "00123";
+			string old_kmat3 = "00222";
+			string old_kmat4 = "00333";
+			string old_kmat5 = "00333";
+
+			var list = new List<string>() { "00123", "00123", "00222", "00333", "00333" };
+			var listGroupBy = list.GroupBy(x => x);
+
+			Dictionary<string, int> dic = new Dictionary<string, int>();
+
+			foreach (var grp in listGroupBy)
+			{
+				dic.Add(grp.Key, grp.Count());
+			}
+
+			int key = listGroupBy.Where(x => x.Key == "00123").Count();
+
+			//Dictionary<string, > dic_ = listGroupBy.ToDictionary();
+
+
+
+			var listGroups =
+				from prod in list
+				group prod by list into prodGroup
+				select new { OldKmat = prodGroup.Key, Count = prodGroup.Count() };
+
+
+			//Dictionary<string, int> dic = new Dictionary<string, int>();
+
+			//foreach (var item in listGroups)
+			//	Console.WriteLine(item.OldKmat + " - " + item.Count);
+			//    dic.Add(item.OldKmat, item.Count);
+
+
+
+			//var where = listGroupBy.Where((x,y) => x == y);
+		}
 
         static void Main2(string path, string fileName)
         {
@@ -321,6 +438,10 @@ namespace ExcelReadC
 
             //string path = @"\\erp\TEMP\App\Остатки\17.02.18\";
 
+
+
+            //-------------------------------------------------------
+
             string str_counter = "9999";
             int len_counter = str_counter.Length;
             string ceh99 = "13006";
@@ -331,7 +452,10 @@ namespace ExcelReadC
 
             string kmat99 = "917" + "vmv" + ceh99 + new String('0', 4 - str_counter.Length) + str_counter;
 
-            //return;
+
+
+
+            return;
 
             //string path = @"d:\Doc\Work\MS Visual Studio\ExcelReadC\Остатки\";
 
@@ -560,8 +684,6 @@ namespace ExcelReadC
                                             string ss1 = rows1[0].ItemArray[2].ToString();
                                             string ss2 = rows1[0].ItemArray[3].ToString();
 
-
-
                                             string sss = rows1.ToString();
                                             //if (!KsmTable.IsRecord(kmat))
                                             //{
@@ -622,9 +744,9 @@ namespace ExcelReadC
                                             }
                                             else
                                             {
-
                                                 counter++;
                                                 kmat = ConvertKmat("", ceh_s, DoubleKmat);
+
                                                 //if (!KsmTable.IsRecord(kmat))
                                                 //{
                                                 //InsertKmat(kmat, kmat_old, naim, size_type, Convert.ToInt32(ei), fileName, BS);
