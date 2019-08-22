@@ -375,6 +375,31 @@ namespace ExcelReadC
 
         public static Dictionary<string, string> KSM = new Dictionary<string, string>();
 
+		static DataTable ImportDataExcel(string path, string fileName)
+		{
+			DataTable dt = new DataTable("sheet");
+
+			string connectionString;
+			OleDbConnection connection;
+
+			//'Для Excel 12.0 
+			connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; 
+				Data Source=" + Path.Combine(path, fileName) + "; Extended Properties=\"Excel 12.0 Xml;HDR=Yes\";";
+			connection = new OleDbConnection(connectionString);
+			connection.Open();
+
+			OleDbCommand command = connection.CreateCommand();
+
+			command.CommandText = "Select * From [sheet$A0:I15000] "; //Where [К-во (факт)] = 20 ";
+
+			da = new OleDbDataAdapter(command);
+			dt = new DataTable();
+
+			da.Fill(dt);
+
+			return dt;
+		}
+
         static void Main2(string path, string fileName)
         {
             //string path = "Data.xlsx";
